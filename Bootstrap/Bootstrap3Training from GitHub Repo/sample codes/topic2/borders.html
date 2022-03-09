@@ -13,6 +13,8 @@
       width: 70px;
       height: 70px;
       margin: 6px;
+      border-color: red !important; /* Name collision with Bootstrap's border class, so need to use !important, otherwise this CSS rule will be overwritten with Bootstrap's version. */
+      border-style: solid !important; /* Name collision with Bootstrap's border class, so need to use !important, otherwise this CSS rule will be overwritten with Bootstrap's version. */
     }
     .box {
     display: inline-block;
@@ -20,11 +22,13 @@
     height: 70px;
     margin: 6px;
     background-color: #555;
+    border-color: red;
+    border-style: solid;
+    border-width: 10px;
   }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h2>Borders</h2>
         <p>Use the border classes to add or remove borders from an element:</p> 
