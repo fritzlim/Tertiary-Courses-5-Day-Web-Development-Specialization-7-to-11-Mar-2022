@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import './css/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Hello from './component/Hello';
 import Ticker from './component/Ticker';
@@ -37,6 +39,9 @@ ReactDOM.render(
     <Hello />
     <App />
     <Hello />
+    {/* <BrowserRouter>
+    
+    </BrowserRouter> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
