@@ -11,6 +11,8 @@ import ToDo from './component/ToDo';
 import ToDoV3 from './component/ToDoV3';
 import ToDoV4 from './component/ToDoV4';
 import ToDoV5 from './component/ToDoV5';
+import ToDoV5FunctionComponent from './component/ToDoV5FunctionComponent';
+import ClockFunctionComponent from './component/ClockFunctionComponent';
 import reportWebVitals from './reportWebVitals';
 import {groceryItems, name, items} from './data/groceryItems';
 
@@ -18,12 +20,14 @@ import {groceryItems, name, items} from './data/groceryItems';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Ticker /> */}
+    <ClockFunctionComponent/>
+    <ToDoV5FunctionComponent />
     <Welcome text="Fritz" text1="asdfsaf"/>
     <ToDoV3 items={groceryItems} title={name}/>
     <div className="red">
       <Demo />
     </div>
-    <Ticker />
     <ToDo />
     <ToDoV3 />
     <ToDoV4 items1={items} items2={groceryItems}/>
