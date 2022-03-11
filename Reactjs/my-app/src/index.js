@@ -13,6 +13,7 @@ import ToDoV4 from './component/ToDoV4';
 import ToDoV5 from './component/ToDoV5';
 import ToDoV5FunctionComponent from './component/ToDoV5FunctionComponent';
 import ClockFunctionComponent from './component/ClockFunctionComponent';
+import BootstrapTesting from './component/BootstrapTesting';
 import reportWebVitals from './reportWebVitals';
 import {groceryItems, name, items} from './data/groceryItems';
 
@@ -21,6 +22,7 @@ import {groceryItems, name, items} from './data/groceryItems';
 ReactDOM.render(
   <React.StrictMode>
     {/* <Ticker /> */}
+    <BootstrapTesting />
     <ClockFunctionComponent/>
     <ToDoV5FunctionComponent />
     <Welcome text="Fritz" text1="asdfsaf"/>
