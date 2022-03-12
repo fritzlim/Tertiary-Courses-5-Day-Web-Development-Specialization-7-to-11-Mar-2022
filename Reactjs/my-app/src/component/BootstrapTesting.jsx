@@ -47,6 +47,10 @@ function BootstrapTesting(props) {
         realtime: {userFeedbackOnChange}
       </Alert>
       <Alert variant="success">
+        <Alert.Heading>
+          <h6>Submited Feedback</h6>
+        </Alert.Heading>
+        <hr />
         This is the submitted feedback: {userFeedback}
       </Alert>
       <Toast show={show} onClose={() => toggleShow(false)}>
