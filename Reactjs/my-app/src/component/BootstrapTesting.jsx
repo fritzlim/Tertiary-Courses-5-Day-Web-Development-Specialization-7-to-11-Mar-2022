@@ -24,8 +24,16 @@ function BootstrapTesting(props) {
 
   return (
     <>
-      <h4>Testing of Some React-Boostrap Components</h4>
-      <div className="row">
+      <h4 className="pb-3">Testing of Some React-Boostrap Components</h4>
+      <Toast show={show} onClose={() => toggleShow(false)}>
+        <Toast.Header>
+          <h6 className="me-auto">React-Bootstrap Toast</h6>
+          <small>11 mins ago</small>
+        </Toast.Header>
+        <Toast.Body>This is a toast</Toast.Body>
+      </Toast>
+
+      <div className="row my-3">
         <div className="col">
           {!show && (
             <Button onClick={() => toggleShow(true)}>Show Toast</Button>
@@ -42,27 +50,21 @@ function BootstrapTesting(props) {
           </Button>
         </div>
       </div>
-      <Alert variant="primary">
-        Hello, this is an alert. This is the submitted feedback shown in
-        realtime: {userFeedbackOnChange}
-      </Alert>
 
       <div className="mx-4">
-        <h3>Textarea Demo</h3>
+        <h3 className="mb-3">Textarea Demo</h3>
+        <Alert variant="primary">
+          Hello, this is an alert. This is the submitted feedback shown in
+          realtime: {userFeedbackOnChange}
+        </Alert>
         <Alert variant="success">
           <Alert.Heading>
             <h6>Submited Feedback</h6>
           </Alert.Heading>
           <hr />
-          This is the submitted feedback: {userFeedback}
+          This is the submitted feedback after the Send Feedback button is
+          clicked: {userFeedback}
         </Alert>
-        <Toast show={show} onClose={() => toggleShow(false)}>
-          <Toast.Header>
-            <h6 className="me-auto">React-Bootstrap Toast</h6>
-            <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body>This is a toast</Toast.Body>
-        </Toast>
 
         <Form.Group className="m-0">
           <Form.Control
