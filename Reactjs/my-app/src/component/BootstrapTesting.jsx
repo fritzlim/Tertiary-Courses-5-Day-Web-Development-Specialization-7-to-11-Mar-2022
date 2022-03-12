@@ -46,40 +46,45 @@ function BootstrapTesting(props) {
         Hello, this is an alert. This is the submitted feedback shown in
         realtime: {userFeedbackOnChange}
       </Alert>
-      <Alert variant="success">
-        <Alert.Heading>
-          <h6>Submited Feedback</h6>
-        </Alert.Heading>
-        <hr />
-        This is the submitted feedback: {userFeedback}
-      </Alert>
-      <Toast show={show} onClose={() => toggleShow(false)}>
-        <Toast.Header>
-          <h6 className="me-auto">React-Bootstrap Toast</h6>
-          <small>11 mins ago</small>
-        </Toast.Header>
-        <Toast.Body>This is a toast</Toast.Body>
-      </Toast>
 
-      <Form.Group className="m-0">
-        <Form.Control
-          as="textarea"
-          type="text"
-          rows="3"
-          placeholder="Type your feedback here..."
-          onChange={(e) => {
-            handleUserFeedbackOnChange(e);
-          }}
-        />
-        <Button
-          variant="outline-success"
-          onClick={() => {
-            onSubmit();
-          }}
-        >
-          Send Feedback
-        </Button>
-      </Form.Group>
+      <div className="mx-4">
+        <h3>Textarea Demo</h3>
+        <Alert variant="success">
+          <Alert.Heading>
+            <h6>Submited Feedback</h6>
+          </Alert.Heading>
+          <hr />
+          This is the submitted feedback: {userFeedback}
+        </Alert>
+        <Toast show={show} onClose={() => toggleShow(false)}>
+          <Toast.Header>
+            <h6 className="me-auto">React-Bootstrap Toast</h6>
+            <small>11 mins ago</small>
+          </Toast.Header>
+          <Toast.Body>This is a toast</Toast.Body>
+        </Toast>
+
+        <Form.Group className="m-0">
+          <Form.Control
+            as="textarea"
+            type="text"
+            rows="3"
+            placeholder="Type your feedback here..."
+            onChange={(e) => {
+              handleUserFeedbackOnChange(e);
+            }}
+          />
+          <Button
+            className="my-3"
+            variant="outline-success"
+            onClick={() => {
+              onSubmit();
+            }}
+          >
+            Send Feedback
+          </Button>
+        </Form.Group>
+      </div>
     </>
   );
 }
