@@ -23,6 +23,7 @@ import {groceryItems, name, items} from './data/groceryItems';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className="container">
     {/* <Ticker /> */}
     <BootstrapTesting />
     <ClockFunctionComponent/>
@@ -42,6 +43,7 @@ ReactDOM.render(
     {/* <BrowserRouter>
     
     </BrowserRouter> */}
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
