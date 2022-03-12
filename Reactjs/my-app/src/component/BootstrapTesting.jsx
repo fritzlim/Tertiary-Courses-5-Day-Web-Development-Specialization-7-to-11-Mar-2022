@@ -29,7 +29,8 @@ function BootstrapTesting(props) {
       <Alert variant="primary">Hello, this is an alert</Alert>
       <Toast show={show} onClose={() => toggleShow(false)}>
         <Toast.Header>
-          <h6>React-Bootstrap Toast</h6>
+          <h6 className="me-auto">React-Bootstrap Toast</h6>
+          <small>11 mins ago</small>
         </Toast.Header>
         <Toast.Body>This is a toast</Toast.Body>
       </Toast>
