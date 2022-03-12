@@ -2,9 +2,25 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Toast from "react-bootstrap/Toast";
+import Form from "react-bootstrap/Form";
 
 function BootstrapTesting(props) {
   const [show, toggleShow] = useState(true);
+  const [userFeedbackOnChange, setUserFeedbackOnChange] = useState("");
+  const [userFeedback, setUserFeedback] = useState("");
+
+  const handleUserFeedbackOnChange = (e) => {
+    setUserFeedbackOnChange(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const onSubmit = () => {
+    console.log(userFeedbackOnChange);
+    alert(
+      `You typed:\n${userFeedbackOnChange}\n\nAlso see the broswer's console.`
+    );
+    setUserFeedback(userFeedbackOnChange);
+  };
 
   return (
     <>
@@ -26,7 +42,13 @@ function BootstrapTesting(props) {
           </Button>
         </div>
       </div>
-      <Alert variant="primary">Hello, this is an alert</Alert>
+      <Alert variant="primary">
+        Hello, this is an alert. This is the submitted feedback shown in
+        realtime: {userFeedbackOnChange}
+      </Alert>
+      <Alert variant="success">
+        This is the submitted feedback: {userFeedback}
+      </Alert>
       <Toast show={show} onClose={() => toggleShow(false)}>
         <Toast.Header>
           <h6 className="me-auto">React-Bootstrap Toast</h6>
@@ -34,6 +56,26 @@ function BootstrapTesting(props) {
         </Toast.Header>
         <Toast.Body>This is a toast</Toast.Body>
       </Toast>
+
+      <Form.Group className="m-0">
+        <Form.Control
+          as="textarea"
+          type="text"
+          rows="3"
+          placeholder="Type your feedback here..."
+          onChange={(e) => {
+            handleUserFeedbackOnChange(e);
+          }}
+        />
+        <Button
+          variant="outline-success"
+          onClick={() => {
+            onSubmit();
+          }}
+        >
+          Send Feedback
+        </Button>
+      </Form.Group>
     </>
   );
 }
