@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,11 +39,10 @@ ReactDOM.render(
       <ToDoV5 />
       <Hello />
     </div>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
     <Hello />
-    {/* <BrowserRouter>
-    
-    </BrowserRouter> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
