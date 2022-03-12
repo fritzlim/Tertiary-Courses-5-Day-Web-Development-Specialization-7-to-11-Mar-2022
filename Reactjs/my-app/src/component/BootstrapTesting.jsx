@@ -8,6 +8,7 @@ function BootstrapTesting(props) {
   const [show, toggleShow] = useState(true);
   const [userFeedbackOnChange, setUserFeedbackOnChange] = useState("");
   const [userFeedback, setUserFeedback] = useState("");
+  const [showUserFeedbackAlert, setShowUserFeedbackAlert] = useState(false);
 
   const handleUserFeedbackOnChange = (e) => {
     setUserFeedbackOnChange(e.target.value);
@@ -20,6 +21,7 @@ function BootstrapTesting(props) {
       `You typed:\n${userFeedbackOnChange}\n\nAlso see the broswer's console.`
     );
     setUserFeedback(userFeedbackOnChange);
+    setShowUserFeedbackAlert(true);
   };
 
   return (
@@ -57,14 +59,16 @@ function BootstrapTesting(props) {
           Hello, this is an alert. This is the submitted feedback shown in
           realtime: {userFeedbackOnChange}
         </Alert>
-        <Alert variant="success">
-          <Alert.Heading>
-            <h6>Submited Feedback</h6>
-          </Alert.Heading>
-          <hr />
-          This is the submitted feedback after the Send Feedback button is
-          clicked: {userFeedback}
-        </Alert>
+        {showUserFeedbackAlert && (
+          <Alert variant="success">
+            <Alert.Heading>
+              <h6>Submited Feedback</h6>
+            </Alert.Heading>
+            <hr />
+            This is the submitted feedback after the Send Feedback button is
+            clicked: {userFeedback}
+          </Alert>
+        )}
 
         <Form.Group className="m-0">
           <Form.Control
