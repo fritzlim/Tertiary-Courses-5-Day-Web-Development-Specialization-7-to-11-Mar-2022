@@ -23,27 +23,27 @@ import {groceryItems, name, items} from './data/groceryItems';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="container">
-    {/* <Ticker /> */}
-    <BootstrapTesting />
-    <ClockFunctionComponent/>
-    <ToDoV5FunctionComponent />
-    <Welcome text="Fritz" text1="asdfsaf"/>
-    <ToDoV3 items={groceryItems} title={name}/>
-    <div className="red">
-      <Demo />
+    <div className="container my-4">
+      {/* <Ticker /> */}
+      <BootstrapTesting />
+      <ClockFunctionComponent/>
+      <ToDoV5FunctionComponent />
+      <Welcome text="Fritz" text1="asdfsaf"/>
+      <ToDoV3 items={groceryItems} title={name}/>
+      <div className="red">
+        <Demo />
+      </div>
+      <ToDo />
+      <ToDoV3 />
+      <ToDoV4 items1={items} items2={groceryItems}/>
+      <ToDoV5 />
+      <Hello />
     </div>
-    <ToDo />
-    <ToDoV3 />
-    <ToDoV4 items1={items} items2={groceryItems}/>
-    <ToDoV5 />
-    <Hello />
     <App />
     <Hello />
     {/* <BrowserRouter>
     
     </BrowserRouter> */}
-    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
