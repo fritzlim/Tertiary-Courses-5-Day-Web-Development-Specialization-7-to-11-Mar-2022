@@ -11,6 +11,7 @@ function App() { // This is the App component.
           paddingBottom: "1rem",
         }}
       >
+        <Link to="/">Home</Link> |{" "}
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/expenses">Expenses</Link>
       </nav>
