@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,8 @@ import ClockFunctionComponent from './component/ClockFunctionComponent';
 import BootstrapTesting from './component/BootstrapTesting';
 import reportWebVitals from './reportWebVitals';
 import {groceryItems, name, items} from './data/groceryItems';
+import Invoices from './routes/Invoices';
+import Expenses from './routes/Expenses';
 
 // const groceryItems = ['Groceries', 'Lunch']; // Placed this in data/groceryItems.js
 
@@ -40,7 +42,11 @@ ReactDOM.render(
       <Hello />
     </div>
     <BrowserRouter>
-      <App />
+      <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="expenses" element={<Expenses />} />
+      <Route path="invoices" element={<Invoices />} />
+    </Routes>
     </BrowserRouter>
     <Hello />
   </React.StrictMode>,
