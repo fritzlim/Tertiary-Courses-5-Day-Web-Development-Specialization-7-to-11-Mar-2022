@@ -25,7 +25,7 @@ function BootstrapTesting(props) {
   };
 
   return (
-    <>
+    <div className="mb-4">
       <h4 className="pb-3">Testing of Some React-Boostrap Components</h4>
       <Toast show={show} onClose={() => toggleShow(false)}>
         <Toast.Header>
@@ -91,7 +91,7 @@ function BootstrapTesting(props) {
           </Button>
         </Form.Group>
       </div>
-    </>
+    </div>
   );
 }
 

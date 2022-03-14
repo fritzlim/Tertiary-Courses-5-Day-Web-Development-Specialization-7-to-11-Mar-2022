@@ -29,9 +29,9 @@ function ClockFunctionComponent(props) {
   }, [runAgain, runAgain2]);
 
   return (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {timestamp.toLocaleTimeString()}.</h2>
+    <div className="mb-4">
+      <h3>Clock Function Component</h3>
+      <p>It is {timestamp.toLocaleTimeString()}.</p>
       <button
         onClick={() => {
           setRunAgain(!runAgain);
