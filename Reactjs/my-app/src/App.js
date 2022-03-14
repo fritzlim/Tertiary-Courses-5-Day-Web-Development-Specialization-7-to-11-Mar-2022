@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function App() { // This is the App component.
   return (
@@ -14,6 +14,7 @@ function App() { // This is the App component.
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/expenses">Expenses</Link>
       </nav>
+      <Outlet />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
