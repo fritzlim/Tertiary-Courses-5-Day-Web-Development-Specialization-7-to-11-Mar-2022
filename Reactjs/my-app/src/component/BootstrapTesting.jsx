@@ -54,7 +54,7 @@ function BootstrapTesting(props) {
       </div>
 
       <div className="mx-4">
-        <h3 className="mb-3">Textarea Demo</h3>
+        <h3 className="mb-3">Text Input Demo</h3>
         <Alert variant="primary">
           Hello, this is an alert. This is the submitted feedback shown in
           realtime: {userFeedbackOnChange}
@@ -72,7 +72,7 @@ function BootstrapTesting(props) {
 
         <Form.Group className="m-0">
           <Form.Control
-            as="textarea"
+            // as="textarea" // Uncomment this if you need a text area instead of a text box.
             type="text"
             rows="3"
             placeholder="Type your feedback here..."
