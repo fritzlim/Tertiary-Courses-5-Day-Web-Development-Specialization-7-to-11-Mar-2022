@@ -40,44 +40,54 @@ function ToDoV5FunctionComponent(props) {
         {!isitem1Deleted && (
           <li className={item1Class}>
             {item1}{" "}
-            <button
+            <Button
+              size="sm"
+              className="mx-2 my-2"
+              variant="outline-success"
               value="item1"
               onClick={(e) => {
                 setItem(e);
               }}
             >
               Done
-            </button>
-            <button
+            </Button>
+            <Button
+              size="sm"
+              variant="outline-danger"
               value="item1"
               onClick={(e) => {
                 deleteItem(e);
               }}
             >
               Delete
-            </button>
+            </Button>
           </li>
         )}
 
         {!isitem2Deleted && (
           <li className={item2Class}>
             {item2}{" "}
-            <button
+            <Button
+              size="sm"
+              className="mx-2 my-2"
+              variant="outline-success"
               value="item2"
               onClick={(e) => {
                 setItem(e);
               }}
             >
               Done
-            </button>
-            <button
+            </Button>
+            <Button
+              size="sm"
+              variant="outline-danger"
               value="item2"
               onClick={(e) => {
                 deleteItem(e);
               }}
             >
               Delete
-            </button>
+            </Button>
           </li>
         )}
       </ol>
