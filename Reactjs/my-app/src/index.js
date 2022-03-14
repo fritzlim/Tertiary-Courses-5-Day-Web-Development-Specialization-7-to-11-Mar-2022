@@ -6,7 +6,7 @@ import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Hello from './component/Hello';
-import Ticker from './component/Ticker';
+// import Ticker from './component/Ticker';
 import Demo from './component/Demo';
 import Welcome from './component/Welcome';
 import ToDo from './component/ToDo';
