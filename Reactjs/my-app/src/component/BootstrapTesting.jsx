@@ -74,7 +74,7 @@ function BootstrapTesting(props) {
           <Form.Control
             // as="textarea" // Uncomment this if you need a text area instead of a text box.
             type="text"
-            rows="3"
+            // rows="3" // This is for the text area. Uncomment this if you need a text area instead of a text box.
             placeholder="Type your feedback here..."
             onChange={(e) => {
               handleUserFeedbackOnChange(e);
